@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}About Me - Azka Bachri{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2 class="title-section">About Me</h2>
+    <div class="biodata-grid">
+        <div class="bio-image">
+            <div class="bio-img-wrapper">
+                <img src="{% static 'img/azka.jpg' %}" alt="Azka Bachri">
+            </div>
+        </div>
+        <div class="bio-text">
+            <h3>Santri & Web Designer</h3>
+            <p>Saya adalah seorang Santri HSI yang belajar tentang pemograman Python OOP, Django Framework, dan pembuatan arsitektur web berkinerja tinggi. Saya sangat menyukai design yang sangat bagus dan terstruktur rapih.</p>
+            
+            <div class="skills-grid">
+                <div class="skill-card">💎 Python OOP</div>
+                <div class="skill-card">💎 Django Framework</div>
+                <div class="skill-card">💎 CSS Styling</div>
+                <div class="skill-card">💎 UI/UX Minimalist</div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

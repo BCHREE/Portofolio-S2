@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block title %}Home - Azka Bachri{% endblock %}
+
+{% block content %}
+<style>
+    .hero {
+        position: relative;
+        width: 100vw;       /* 🔑 Kunci 1: Lebar 100% mengikuti layar monitor */
+        min-height: 100vh;  /* 🔑 Kunci 2: Tinggi 100% penuh dari atas sampai bawah */
+        margin: 0;
+        padding: 0;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        box-sizing: border-box;
+        
+        /* 🌌 Lapisan warna gelap (85%) + Gambar Galaksi Transparan */
+        background: linear-gradient(rgba(10, 10, 25, 0.85), rgba(10, 10, 25, 0.9)), 
+                    url('https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?q=80&w=2070&auto=format&fit=cover') no-repeat center center;
+        background-size: cover;
+        background-attachment: fixed;
+        
+        color: #ffffff;
+    }
+
+    /* Pengaturan teks agar tetap rapi di tengah layar */
+    .hero p {
+        font-size: 16px;
+        letter-spacing: 3px;
+        color: #00cec9;
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
+
+    .hero h1 {
+        font-size: 3.5rem; /* Ukuran tulisan digedein sedikit biar pas di layar penuh */
+        margin-bottom: 30px;
+    }
+
+    .hero h1 span {
+        color: #f1c40f;
+        text-shadow: 0 0 15px rgba(241, 196, 15, 0.3);
+    }
+</style>
+
+<section class="hero">
+    <p>WELCOME TO MY PORTAL</p>
+    <h1>Hi Guys, I'm <span>Azka Bachri</span></h1>
+    <a href="{% url 'biodata' %}" class="btn-gold">Explore More</a>
+</section>
+
+{% endblock %}
