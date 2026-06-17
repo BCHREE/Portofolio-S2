@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Galeri Pondok - Azka Bachri{% endblock %}
+
+{% block content %}
+<div class="gallery-container" style="max-width: 1200px; margin: 0 auto; padding: 30px 20px; text-align: center;">
+    
+    <h2 class="title-section" style="margin-bottom: 10px; font-size: 28px;">Galeri Foto di Pondok</h2>
+    <p class="subtitle-section" style="color: #666; margin-bottom: 30px;">Dokumentasi kegiatan selama di pondok.</p>
+
+    <div class="gallery-flex-box" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 25px;">
+        
+        <div class="gallery-card" style="width: 320px; background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+            <div style="width: 100%; height: 200px; overflow: hidden;">
+                <img src="{% static 'img/pondok1.jpg' %}" alt="Kegiatan Belajar" 
+                style="width: 100%; height: 100%; object-fit: cover; object-position: center 40%;"> 
+            </div>
+            <div style="padding: 12px; font-size: 15px; color: #333; font-weight: bold;">IDUL ADHA</div>
+        </div>
+
+        <div class="gallery-card" style="width: 320px; background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+            <div style="width: 100%; height: 200px; overflow: hidden;">
+                <img src="{% static 'img/pondok2.jpg' %}" alt="Suasana Pondok" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div style="padding: 12px; font-size: 15px; color: #333; font-weight: bold;">Futsal</div>
+        </div>
+
+        <div class="gallery-card" style="width: 320px; background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+            <div style="width: 100%; height: 200px; overflow: hidden;">
+                <img src="{% static 'img/pondok3.jpg' %}" alt="Foto Santri" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div style="padding: 12px; font-size: 15px; color: #333; font-weight: bold;">Juara Poster</div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

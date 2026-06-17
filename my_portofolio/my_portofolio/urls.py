@@ -14,17 +14,16 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-# my_portfolio/urls.py
 from django.contrib import admin
 from django.urls import path
-from portofolio_app import views 
+from portofolio_app import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index_view, name='index'),
-    path('biodata/', views.biodata_view, name='biodata'),
+    path('tentang/', views.about_view, name='tentang'),
     path('jadwal/', views.jadwal_view, name='jadwal'),
     path('galery/', views.galery_view, name='galery'),
-    path('project/', views.project_view, name='project'), # Jalur baru untuk project
+    path('project/', views.project_view, name='project'),
     path('feedback/', views.feedback_view, name='feedback'),
 ]

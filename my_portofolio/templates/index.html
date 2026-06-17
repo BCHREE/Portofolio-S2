@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Home - Azka Bachri{% endblock %}
+
+{% block content %}
+<style>
+    /* Menghilangkan padding atau batasan margin luar jika ada */
+    .hero-full-bg {
+        position: fixed; /* Memastikan background mengunci full satu layar penuh */
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+        box-sizing: border-box;
+        z-index: 1; /* Menjaga posisi di bawah komponen navbar utama jika navbarnya fixed */
+        
+        /* 🌌 BACKGROUND FULL GALAKSI */
+        background: linear-gradient(rgba(15, 15, 30, 0.8), rgba(15, 15, 30, 0.85)), 
+                    url('https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?q=80&w=2070&auto=format&fit=cover') no-repeat center center;
+        background-size: cover;
+    }
+
+    /* Styling teks biar kontras dan terbaca jelas */
+    .hero-full-bg p {
+        font-size: 18px;
+        letter-spacing: 4px;
+        color: #00cec9; 
+        font-weight: 600;
+        margin-bottom: 15px;
+    }
+
+    .hero-full-bg h1 {
+        font-size: 3.5rem;
+        margin-bottom: 30px;
+        color: #ffffff;
+    }
+
+    .hero-full-bg h1 span {
+        color: #f1c40f; 
+        text-shadow: 0 0 20px rgba(241, 196, 15, 0.5);
+    }
+</style>
+
+<div class="hero-full-bg">
+    <p>WELCOME TO MY PORTAL</p>
+    <h1>Hi Guys, I'm <span>Azka Bachri</span></h1>
+    <a href="/tentang/" class="btn-gold">Explore More</a>
+</div>
+{% endblock %}

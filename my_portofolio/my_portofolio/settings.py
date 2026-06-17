@@ -25,8 +25,11 @@ SECRET_KEY = 'django-insecure-n43c@9@rp$%lfmklc_e0x$f1to0a#e-_b4qz4$y+n_k!vb9j)v
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.vercel.app', '127.0.0.1', 'localhost']
 
+STATIC_URL = 'static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Application definition
 
@@ -42,6 +45,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware', # <-- Tambahkan ini
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -55,7 +59,7 @@ ROOT_URLCONF = 'my_portofolio.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates'], # Folder templates global luar
+        'DIRS': [BASE_DIR / 'templates'], # <-- PASTIKAN BARIS INI SEPERTI INI
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -65,8 +69,8 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
             ],
         },
-    }, # <--- Pastikan ada penutup kurung kurawal dan koma di sini
-] # <--- Dan penutup kurung siku di sini
+    },
+]
 
 WSGI_APPLICATION = 'my_portofolio.wsgi.application'
 
