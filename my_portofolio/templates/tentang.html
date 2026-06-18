@@ -7,11 +7,18 @@
 <div class="container">
     <h2 class="title-section">About Me</h2>
     <div class="biodata-grid">
-        <div class="bio-image">
-            <div class="bio-img-wrapper">
-                <img src="{% static 'img/azka.jpg' %}" alt="Azka Bachri">
-            </div>
-        </div>
+        <div class="profile-image-container" style="text-align: center; margin-bottom: 25px;">
+    <img src="{% static 'img/foto_azka.jpg' %}" alt="Foto Azka Bachri" style="
+        width: 250px; 
+        height: 250px; 
+        object-fit: cover; 
+        border-radius: 50%; 
+        border: 5px solid #2980b9; 
+        box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        transition: transform 0.3s;"
+        onmouseover="this.style.transform='scale(1.05)'"
+        onmouseout="this.style.transform='scale(1)'">
+</div>
         <div class="bio-text">
             <h3>Santri & Web Designer</h3>
             <p>Saya adalah seorang Santri HSI yang belajar tentang pemograman Python OOP, Django Framework, dan pembuatan arsitektur web berkinerja tinggi. Saya sangat menyukai design yang sangat bagus dan terstruktur rapih.</p>
